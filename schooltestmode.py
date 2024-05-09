@@ -84,7 +84,7 @@ with total1:
 
 with total2:
     st.info('碩士', icon="🧑‍🎓")
-    st.metric(label="Mode TZS", value=f"{grade_count.get('碩士', 0):,.0f}")
+    st.metric(label="總人數", value=f"{grade_count.get('碩士', 0):,.0f}")
 
 with total3:
     st.info('學士', icon="🧑‍🎓")
@@ -102,7 +102,7 @@ style_metric_cards(background_color="#FFFFFF",border_left_color="#686664",border
 
 
 def graphs():
-    # Bar graph: investment by grade (男女總合)
+    
     grade_count_df = pd.DataFrame(grade_count.items(), columns=['Grade', 'Total People'])
     fig_grade = px.bar(
         grade_count_df,
